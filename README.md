@@ -2,6 +2,42 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
+## Timer Management:
+
+Each timer has a unique ID, name, duration (in seconds), category, and status ("Paused," "Running," or "Completed").
+
+Timers are saved persistently using AsyncStorage to retain state across app restarts.
+
+Category Functionality:
+
+Timers can be grouped by category, and users can perform batch actions (start, pause, reset) on all timers in a category.
+
+Halfway Alert:
+
+A halfway notification is displayed using react-native-flash-message if the halfwayAlert flag is enabled for a timer.
+
+Completion Tracking:
+
+Completed timers are stored in a separate history with their name and completion timestamp.
+
+This history is accessible from a "HistoryScreen."
+
+UI Considerations:
+
+The app uses a simple flat design with features like collapsible categories, a progress bar for each timer, and toggle switches for halfway alerts.
+
+Navigation:
+
+React Navigation is assumed to be configured to navigate between the "HomeScreen" and "HistoryScreen."
+
+Error Handling:
+
+Basic error handling is included for invalid inputs and AsyncStorage operations.
+
+Platform Compatibility:
+
+The app is designed to work on both iOS and Android platforms.
+
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
